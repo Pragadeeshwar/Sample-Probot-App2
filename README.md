@@ -1,6 +1,6 @@
 # Sample-Probot-App
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app (edit 12)
+> A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app (edit 13)
 
 ## Setup
 
