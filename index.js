@@ -8,7 +8,7 @@ module.exports = (app) => {
 
   app.on("push", async (context) => {
 
-	app.log.info(context);
+	app.log.info("context");
 	
   });
   
