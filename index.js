@@ -11,7 +11,7 @@ module.exports = (app) => {
 	const createIssue = context.issue({
 		body: "The repository has been updated",
 	});
-	return github.issues.create(createIssue);
+	return context.octokit.issues.create(createIssue);
 	app.log.info("context");
 	
   });
