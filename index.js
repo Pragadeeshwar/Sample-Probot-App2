@@ -9,6 +9,7 @@ module.exports = (app) => {
   app.on("push", async (context) => {
 	
 	const createIssue = context.issue({
+		title: "New Issue",
 		body: "The repository has been updated",
 	});
 	return context.octokit.issues.create(createIssue);
