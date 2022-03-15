@@ -8,23 +8,12 @@ module.exports = (app) => {
 
   app.on("push", async (context) => {
 
-    const issueComment = context.issue({
+    /*const issueComment = context.issue({
       body: "Thanks for opening this issue!",
     });
-    return context.octokit.issues.createComment(issueComment);
+    return context.octokit.issues.createComment(issueComment);*/
 	app.log.info(context);
 	
-	/*try {
-		const nameToGreet = core.getInput('who-to-greet');
-		console.log(`Hello $[nameToGreet]!`);
-		const time = (new Date()).toTimeSting();
-		core.setOutput("time",time);
-		
-		const payload = JSON.stringify(github.context.payload, undefined, 2);
-		console.log(`The event payload: $[payload]`);
-	} catch (error) {
-		core.satisfied(error.message);
-	}*/
   });
   
   
