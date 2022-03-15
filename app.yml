@@ -16,7 +16,7 @@ default_events:
   # - check_run
   # - check_suite
   # - commit_comment
-  # - create
+    - create
   # - delete
   # - deployment
   # - deployment_status
@@ -35,12 +35,12 @@ default_events:
 # - project_card
 # - project_column
 # - public
-# - pull_request
-# - pull_request_review
-# - pull_request_review_comment
+  - pull_request
+  - pull_request_review
+  - pull_request_review_comment
   - push
 # - release
-# - repository
+  - repository
 # - repository_import
 # - status
 # - team
@@ -82,11 +82,11 @@ default_permissions:
 
   # Pull requests and related comments, assignees, labels, milestones, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests
-  # pull_requests: read
+   pull_requests: read
 
   # Manage the post-receive hooks for a repository.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-hooks
-  # repository_hooks: read
+   repository_hooks: read
 
   # Manage repository projects, columns, and cards.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-projects
@@ -98,7 +98,7 @@ default_permissions:
 
   # Commit statuses.
   # https://developer.github.com/v3/apps/permissions/#permission-on-statuses
-  # statuses: read
+   statuses: read
 
   # Organization members and teams.
   # https://developer.github.com/v3/apps/permissions/#permission-on-members
