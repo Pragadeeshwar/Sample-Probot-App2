@@ -8,10 +8,6 @@ module.exports = (app) => {
 
   app.on("push", async (context) => {
 
-    /*const issueComment = context.issue({
-      body: "Thanks for opening this issue!",
-    });
-    return context.octokit.issues.createComment(issueComment);*/
 	app.log.info(context);
 	
   });
