@@ -6,14 +6,7 @@ module.exports = (app) => {
   // Your code here
   app.log.info("Yay, the app was loaded!");
 
-const core = require('@actions/core');
-const github = require('@actions/github');
-const yaml = require('yml');
-
   app.on("push", async (context) => {
-	const core = require('@actions/core');
-	const github = require('@actions/github');
-	const yaml = require('yml');
 
     const issueComment = context.issue({
       body: "Thanks for opening this issue!",
