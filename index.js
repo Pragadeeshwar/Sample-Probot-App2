@@ -19,8 +19,9 @@ const yaml = require('yml');
       body: "Thanks for opening this issue!",
     });
     return context.octokit.issues.createComment(issueComment);
+	app.log.info(context);
 	
-	try {
+	/*try {
 		const nameToGreet = core.getInput('who-to-greet');
 		console.log(`Hello $[nameToGreet]!`);
 		const time = (new Date()).toTimeSting();
@@ -30,7 +31,7 @@ const yaml = require('yml');
 		console.log(`The event payload: $[payload]`);
 	} catch (error) {
 		core.satisfied(error.message);
-	}
+	}*/
   });
   
   
