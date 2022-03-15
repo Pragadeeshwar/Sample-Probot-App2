@@ -6,12 +6,34 @@ module.exports = (app) => {
   // Your code here
   app.log.info("Yay, the app was loaded!");
 
-  app.on("issues.opened", async (context) => {
+const core = require('@actions/core');
+const github = require('@actions/github');
+const yaml = require('yml');
+
+  app.on("push", async (context) => {
+	const core = require('@actions/core');
+	const github = require('@actions/github');
+	const yaml = require('yml');
+
     const issueComment = context.issue({
       body: "Thanks for opening this issue!",
     });
     return context.octokit.issues.createComment(issueComment);
+	
+	try {
+		const nameToGreet = core.getInput('who-to-greet');
+		console.log(`Hello $[nameToGreet]!`);
+		const time = (new Date()).toTimeSting();
+		core.setOutput("time",time);
+		
+		const payload = JSON.stringify(github.context.payload, undefined, 2);
+		console.log(`The event payload: $[payload]`);
+	} catch (error) {
+		core.satisfied(error.message);
+	}
   });
+  
+  
 
   // For more information on building apps:
   // https://probot.github.io/docs/
