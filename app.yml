@@ -15,5 +15,3 @@ default_permissions:
    pull_requests: read
    repository_hooks: read
    statuses: read
-
- 
